@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Cart from "./Cart";
+
+const items = [
+  { id: 1, name: "Taco Seasoning", price: "2.5", qty: 2 },
+  { id: 2, name: "Pinto Beans", price: "3.5", qty: 3 },
+  { id: 3, name: "Sour Cream", price: "2.2", qty: 1},
+];
 
 function App() {
+
+// console.log(items)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Cart initialItems ={items}/>
     </div>
   );
 }
